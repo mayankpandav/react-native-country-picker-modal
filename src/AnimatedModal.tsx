@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Animated, Dimensions, StyleSheet } from 'react-native'
+import { Animated, Dimensions, StatusBar, StyleSheet } from 'react-native'
 
 const { height } = Dimensions.get('window')
 
@@ -42,6 +42,7 @@ export const AnimatedModal = ({ children, visible }: Props) => {
         zIndex: 99,
       }}
     >
+      <StatusBar hidden />
       {children}
     </Animated.View>
   )
